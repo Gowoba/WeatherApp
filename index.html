@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="weather-wrapper">
+        <div id="weather-container"> 
+            <h2>Weather for SP</h2>
+            <img id="weather-icon_3" alt="Weather Icon">
+            <div id="temp-div_3"></div>
+            <div id="weather-info_3"></div>
+            <div id="hourly-forecast_3"></div>
+        </div>
+
+        <div id="weather-container"> 
+            <h2>Weather App</h2>
+            <input type="text" id="city" placeholder="Enter city">
+            <button onclick="getWeather('temp-div','weather-info', 'weather-icon','hourly-forecast','city')">Search</button>
+            <img id="weather-icon" alt="Weather Icon">
+            <div id="temp-div"></div>
+            <div id="weather-info"></div>
+            <div id="hourly-forecast"></div>
+        </div>
+
+        <div id="weather-container"> 
+            <h2>Weather for RJ</h2>
+            <img id="weather-icon_2" alt="Weather Icon">
+            <div id="temp-div_2"></div>
+            <div id="weather-info_2"></div>
+            <div id="hourly-forecast_2"></div>
+        </div>
+        
+    </div>
+    <script src="./script.js" type="module"></script>
+    <script>
+        // Chamar a função para as cidades fixas ao carregar a página
+        window.onload = function() {
+            getWeather('temp-div_2', 'weather-info_2', 'weather-icon_2', 'hourly-forecast_2', 'RJ');
+            getWeather('temp-div_3', 'weather-info_3', 'weather-icon_3', 'hourly-forecast_3', 'SP');
+        }
+    </script>
+</body>
+</html>
